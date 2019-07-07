@@ -7,7 +7,7 @@ app.use(cors());
 
 app.get("/", async (req, res) => {
   const result = await axios.get(
-    "https://www.techinasia.com/wp-json/techinasia/2.0/posts"
+    "https://id.techinasia.com/wp-json/techinasia/3.0/posts"
   );
 
   res.send(result.data);
@@ -15,7 +15,7 @@ app.get("/", async (req, res) => {
 
 app.get("/:slug", async (req, res) => {
   const result = await axios.get(
-    `https://www.techinasia.com/wp-json/techinasia/2.0/posts/${req.params.slug}`
+    `https://id.techinasia.com/wp-json/techinasia/3.0/posts/${req.params.slug}`
   );
 
   res.send(result.data);
